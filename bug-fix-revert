@@ -1,0 +1,25 @@
+$ curl -X GET https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/1
+
+{
+  "url": "https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/1",
+  "number": 1,
+  "state": "open",
+  "title": "Bug fix typo",
+  "user": {
+    "login": "Shroud1j"
+  },
+  "head": {
+    "label": "Shroud1j:bug-fix-typo",
+    "ref": "bug-fix-typo",
+    "repo": {
+      "full_name": "Shroud1j/mcino-Introduction-to-Git-and-GitHub"
+    }
+  },
+  "base": {
+    "label": "ibm-developer-skills-network:main",
+    "ref": "main",
+    "repo": {
+      "full_name": "ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub"
+    }
+  }
+}
