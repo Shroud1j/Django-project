@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addItem } from "./CartSlice";
 
@@ -26,67 +26,125 @@ const products = [
     },
     {
         id: 4,
+        name: "Rose",
+        price: 16,
+        category: "Flowering Plants",
+        image: "https://images.unsplash.com/photo-1496062031456-07b8f162a322"
+    },
+    {
+        id: 5,
         name: "Monstera",
         price: 25,
         category: "Tropical Plants",
         image: "https://images.unsplash.com/photo-1614594575804-1b8a0b9f7e0d"
     },
     {
-        id: 5,
-        name: "Money Plant",
-        price: 12,
-        category: "Indoor Plants",
-        image: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b"
-    },
-    {
         id: 6,
-        name: "Rubber Plant",
-        price: 22,
-        category: "Indoor Plants",
-        image: "https://images.unsplash.com/photo-1509423350716-97f9360b4e09"
+        name: "Bird of Paradise",
+        price: 30,
+        category: "Tropical Plants",
+        image: "https://images.unsplash.com/photo-1593691509543-c55fb32e5cee"
     }
 ];
 
 function ProductList() {
+
     const dispatch = useDispatch();
 
+    const [addedItems, setAddedItems] = useState([]);
+
+    const handleAddToCart = (product) => {
+        dispatch(addItem(product));
+
+        setAddedItems((previous) => [
+            ...previous,
+            product.id
+        ]);
+    };
+
+    const categories = [
+        "Indoor Plants",
+        "Flowering Plants",
+        "Tropical Plants"
+    ];
+
     return (
-        <div className="product-list">
+        <div>
 
-            <h1>Paradise Nursery</h1>
+            <nav className="navbar">
 
-            <p>
-                Explore our collection of beautiful and healthy plants.
-            </p>
+                <h1>Paradise Nursery</h1>
 
-            <div className="products">
+                <div>
+                    <a href="#plants">Plants</a>
+                    <a href="#cart">Cart</a>
+                </div>
 
-                {products.map((product) => (
+            </nav>
 
-                    <div className="product-card" key={product.id}>
+            <main id="plants" className="product-list">
 
-                        <img
-                            src={product.image}
-                            alt={product.name}
-                        />
+                <h1>Our Plants</h1>
 
-                        <h2>{product.name}</h2>
+                {categories.map((category) => (
 
-                        <p>Category: {product.category}</p>
+                    <section key={category}>
 
-                        <p>${product.price}</p>
+                        <h2>{category}</h2>
 
-                        <button
-                            onClick={() => dispatch(addItem(product))}
-                        >
-                            Add to Cart
-                        </button>
+                        <div className="products">
 
-                    </div>
+                            {products
+                                .filter(
+                                    (product) =>
+                                        product.category === category
+                                )
+                                .map((product) => (
+
+                                    <div
+                                        className="product-card"
+                                        key={product.id}
+                                    >
+
+                                        <img
+                                            src={product.image}
+                                            alt={product.name}
+                                        />
+
+                                        <h3>{product.name}</h3>
+
+                                        <p>
+                                            Category: {product.category}
+                                        </p>
+
+                                        <p>
+                                            ${product.price}
+                                        </p>
+
+                                        <button
+                                            onClick={() =>
+                                                handleAddToCart(product)
+                                            }
+                                            disabled={addedItems.includes(
+                                                product.id
+                                            )}
+                                        >
+                                            {addedItems.includes(product.id)
+                                                ? "Added to Cart"
+                                                : "Add to Cart"}
+                                        </button>
+
+                                    </div>
+
+                                ))}
+
+                        </div>
+
+                    </section>
 
                 ))}
 
-            </div>
+            </main>
 
         </div>
     );
