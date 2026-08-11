@@ -1,13 +1,23 @@
-# Emotion Detection Application
+# Final Project
 
-## Project Name
-Emotion Detection Application using Watson NLP
+## Emotion Detection Application
 
-## Description
-A Python application that detects emotions from text using the Watson NLP library.
+This Final Project is an emotion detection application built using Python and the Watson NLP library.
 
-## Technologies
+The application analyzes text and identifies five emotions:
+
+- Anger
+- Disgust
+- Fear
+- Joy
+- Sadness
+
+It also identifies the dominant emotion in the analyzed text.
+
+## Technologies Used
+
 - Python
 - Watson NLP
 - Flask
-- Unit Testing
+- unittest
+- Pylint
