@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.landing-page {
+    min-height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-content {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.landing-content h1 {
+    color: #2e7d32;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.landing-content p {
+    color: #333;
+    font-size: 18px;
+}
