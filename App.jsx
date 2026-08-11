@@ -1,21 +1,33 @@
 import React from "react";
-import "./App.css";
 
-function App() {
+function AboutUs() {
     return (
-        <div className="landing-page">
-            <div className="landing-content">
-                <h1>Paradise Nursery</h1>
+        <div className="about-us-container">
 
-                <p>
-                    Welcome to Paradise Nursery, your destination for
-                    beautiful and healthy plants.
-                </p>
+            <h1>About Us</h1>
 
-                <button>Get Started</button>
-            </div>
+            <p>
+                Paradise Nursery is an online plant shopping company
+                dedicated to bringing beautiful and healthy plants
+                closer to plant lovers.
+            </p>
+
+            <p>
+                Our mission is to make it easy for customers to discover,
+                choose, and purchase indoor and outdoor plants through
+                a simple and convenient online shopping experience.
+            </p>
+
+            <h2>Our Services</h2>
+
+            <p>
+                We provide a wide variety of plants, including indoor
+                plants, flowering plants, and tropical plants, with
+                easy shopping and cart management features.
+            </p>
+
         </div>
     );
 }
 
-export default App;
+export default AboutUs;
