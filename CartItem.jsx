@@ -5,10 +5,11 @@ import {
     updateQuantity
 } from "./CartSlice";
 
-function CartItem({ item }) {
+function CartItem({ items }) {
+
     const dispatch = useDispatch();
 
-    const increaseQuantity = () => {
+    const increaseQuantity = (item) => {
         dispatch(
             updateQuantity({
                 id: item.id,
@@ -17,7 +18,8 @@ function CartItem({ item }) {
         );
     };
 
-    const decreaseQuantity = () => {
+    const decreaseQuantity = (item) => {
+
         if (item.quantity > 1) {
             dispatch(
                 updateQuantity({
@@ -28,49 +30,90 @@ function CartItem({ item }) {
         }
     };
 
-    const handleRemove = () => {
-        dispatch(removeItem(item.id));
+    const handleRemove = (id) => {
+        dispatch(removeItem(id));
+    };
+
+    const calculateTotalAmount = () => {
+        return items.reduce(
+            (total, item) =>
+                total + item.price * item.quantity,
+            0
+        );
     };
 
     return (
-        <div className="cart-item">
+        <div className="shopping-cart">
 
-            <img
-                src={item.image}
-                alt={item.name}
-                className="cart-item-image"
-            />
+            <h1>Shopping Cart</h1>
 
-            <div className="cart-item-details">
+            {items.map((item) => (
 
-                <h2>{item.name}</h2>
+                <div className="cart-item" key={item.id}>
 
-                <p>Category: {item.category}</p>
+                    <img
+                        src={item.image}
+                        alt={item.name}
+                        className="cart-item-image"
+                    />
 
-                <p>Price: ${item.price}</p>
+                    <div className="cart-item-details">
 
-                <div className="quantity-controls">
+                        <h2>{item.name}</h2>
 
-                    <button onClick={decreaseQuantity}>
-                        -
-                    </button>
+                        <p>
+                            Unit Price: ${item.price}
+                        </p>
 
-                    <span>{item.quantity}</span>
+                        <div className="quantity-controls">
 
-                    <button onClick={increaseQuantity}>
-                        +
-                    </button>
+                            <button
+                                onClick={() =>
+                                    decreaseQuantity(item)
+                                }
+                            >
+                                -
+                            </button>
+
+                            <span>
+                                {item.quantity}
+                            </span>
+
+                            <button
+                                onClick={() =>
+                                    increaseQuantity(item)
+                                }
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                        <p>
+                            Item Total: $
+                            {(item.price * item.quantity).toFixed(2)}
+                        </p>
+
+                        <button
+                            onClick={() =>
+                                handleRemove(item.id)
+                            }
+                        >
+                            Remove
+                        </button>
+
+                    </div>
 
                 </div>
 
-                <p>
-                    Total: $
-                    {(item.price * item.quantity).toFixed(2)}
-                </p>
+            ))}
 
-                <button onClick={handleRemove}>
-                    Remove
-                </button>
+            <div className="cart-total">
+
+                <h2>
+                    Total Cart Amount: $
+                    {calculateTotalAmount().toFixed(2)}
+                </h2>
 
             </div>
 
