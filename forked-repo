@@ -1,4 +1,4 @@
-$ curl -X GET https://api.github.com/repos/Shroud1j/mcino-Introduction-to-Git-and-GitHub
+
 
 {
   "name": "mcino-Introduction-to-Git-and-GitHub",
