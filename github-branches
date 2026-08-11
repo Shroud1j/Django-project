@@ -1,0 +1,5 @@
+$ git branch -vv
+
+  bug-fix-revert  8cd4567 [origin/bug-fix-revert] Revert bug fix
+  bug-fix-typo    7ab1234 [origin/bug-fix-typo] Fix typo in README
+* main            91cd567 [origin/main] Merge bug-fix-typo
