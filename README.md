@@ -6,44 +6,37 @@ The Simple Interest Calculator is a Bash-based calculator that calculates simple
 
 ## Formula
 
-Simple Interest = (Principal × Rate × Time) / 100
+# e-plantShopping
 
-## Input
+## Paradise Nursery
 
-The calculator asks the user to enter:
+e-plantShopping is a plant shopping web application called Paradise Nursery.
 
-- Principal amount
-- Rate of interest
-- Time period
-
-## Example
-
-If:
-
-- Principal = 10000
-- Rate = 5%
-- Time = 2 years
-
-The simple interest is:
-
-500
-
-## Technology Used
-
-- Bash
-- Git
-- GitHub
+The application allows users to browse different categories of plants, view plant information, and add plants to a shopping cart.
 
 ## Features
 
-- Accepts user input
-- Calculates simple interest
-- Displays the calculated result
-- Easy to use
+- Paradise Nursery landing page
+- Multiple plant categories
+- Plant images, names, and prices
+- Add to Cart functionality
+- Shopping cart management
+- Increase and decrease product quantities
+- Remove products from the cart
+- Dynamic cart total calculation
 
-## How to Run
+## Technologies Used
 
-Run the following command in the terminal:
+- React
+- JavaScript
+- Redux Toolkit
+- CSS
+- HTML
 
-```bash
-bash simple-interest.sh
+## Project Purpose
+
+The purpose of e-plantShopping is to provide a simple and user-friendly online plant shopping experience.
+
+## Repository
+
+Project Name: e-plantShopping
