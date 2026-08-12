@@ -1,10 +1,10 @@
+$ python3 manage.py runserver
+
 Watching for file changes with StatReloader
 Performing system checks...
 
 System check identified no issues (0 silenced).
 
-Django version 4.2.7, using settings 'server.settings'
+Django version 4.x, using settings 'server.settings'
 Starting development server at http://127.0.0.1:8000/
-Quit the server with CTRL-BREAK.
-
-[12/Aug/2026 12:30:15] "GET / HTTP/1.1" 200 4521
+Quit the server with CONTROL-C.
