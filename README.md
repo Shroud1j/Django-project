@@ -1,23 +1,23 @@
-# Final Project
+# Car Dealership Application
 
-## Emotion Detection Application
+## Project Name
 
-This Final Project is an emotion detection application built using Python and the Watson NLP library.
+Car Dealership Application
 
-The application analyzes text and identifies five emotions:
+## Project Description
 
-- Anger
-- Disgust
-- Fear
-- Joy
-- Sadness
+This project is a Django and React based Car Dealership Application.
 
-It also identifies the dominant emotion in the analyzed text.
+The application allows users to view car dealers, search dealers by state, view dealer details, read dealer reviews, and post reviews.
 
-## Technologies Used
+## Features
 
-- Python
-- Watson NLP
-- Flask
-- unittest
-- Pylint
+- User registration and login
+- User logout
+- View all dealers
+- Search dealers by state
+- View dealer details
+- View dealer reviews
+- Post dealer reviews
+- View car makes and models
+- Analyze review sentiment
