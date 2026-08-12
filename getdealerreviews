@@ -1,0 +1,11 @@
+curl -X GET "http://127.0.0.1:8000/djangoapp/dealers/1/reviews"
+
+[
+    {
+        "id": 1,
+        "dealer_id": 1,
+        "name": "John Smith",
+        "review": "Excellent service and very helpful staff.",
+        "rating": 5
+    }
+]
