@@ -1,0 +1,20 @@
+curl -X GET "http://127.0.0.1:8000/djangoapp/dealers?state=Kansas"
+
+[
+    {
+        "id": 1,
+        "full_name": "Kansas Auto Center",
+        "city": "Wichita",
+        "state": "Kansas",
+        "address": "123 Main Street",
+        "zip": "67202"
+    },
+    {
+        "id": 2,
+        "full_name": "Sunrise Motors",
+        "city": "Topeka",
+        "state": "Kansas",
+        "address": "456 Market Street",
+        "zip": "66603"
+    }
+]
