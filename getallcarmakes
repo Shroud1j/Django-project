@@ -1,0 +1,31 @@
+curl -X GET "http://127.0.0.1:8000/djangoapp/carmakes"
+
+[
+    {
+        "id": 1,
+        "make": "Toyota",
+        "models": [
+            "Camry",
+            "Corolla",
+            "RAV4"
+        ]
+    },
+    {
+        "id": 2,
+        "make": "Honda",
+        "models": [
+            "Civic",
+            "Accord",
+            "CR-V"
+        ]
+    },
+    {
+        "id": 3,
+        "make": "Ford",
+        "models": [
+            "Mustang",
+            "F-150",
+            "Explorer"
+        ]
+    }
+]
