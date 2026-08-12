@@ -1,0 +1,12 @@
+curl -X GET "http://127.0.0.1:8000/djangoapp/dealers/1"
+
+{
+    "id": 1,
+    "full_name": "Kansas Auto Center",
+    "city": "Wichita",
+    "state": "Kansas",
+    "address": "123 Main Street",
+    "zip": "67202",
+    "phone": "+1-555-123-4567",
+    "website": "https://kansasautocenter.example.com"
+}
