@@ -1,0 +1,10 @@
+class Question(models.Model):
+    ...
+
+
+class Choice(models.Model):
+    ...
+
+
+class Submission(models.Model):
+    ...
